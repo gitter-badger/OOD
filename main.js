@@ -1,3 +1,4 @@
 
-var provider = require(__dirname + "/lib/Provider.js");
-var privderObject = new provider.object(provider.loadConfigObject());
+let provider = require(__dirname + "/lib/Provider.js");
+let providerObject = new provider.class(provider.class.loadConfigObject());
+providerObject.start();
