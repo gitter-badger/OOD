@@ -3,7 +3,7 @@
 class Test {
   showMessage(p1,p2) {
     if(this.parameter) {
-        return this.parameter.message + " " + p1 + " " + p2;
+        return "hdhdhdhd :D hammer " + this.parameter.message + " " + p1 + " " + p2;
     } else {
       return "Hallo";
     }
