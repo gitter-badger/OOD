@@ -7,7 +7,16 @@ var config = {
   servicesPath: __dirname + "/Services/",
   resourcesPath: __dirname + "/Resources/",
   errorContentType: "text/plain",
-
+  indexTypes: [
+    "html"
+  ],
+  session: {
+    sessionFolderPath: "~/Documents/Programming/Projects/JS/OOD/sessionfiles",
+    cookieExpire: "",
+    sessionExpire: "",
+    fileEncoding: "utf8",
+    cleanerInterval: ""
+  },
   extensionRules: {
 
     txt: {
