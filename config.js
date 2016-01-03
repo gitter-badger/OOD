@@ -11,11 +11,11 @@ var config = {
     "html"
   ],
   session: {
-    sessionFolderPath: "~/Documents/Programming/Projects/JS/OOD/sessionfiles",
+    sessionFolderPath: "/home/marius/Documents/Programming/Projects/JS/OOD/sessionfiles",
     cookieExpire: "",
-    sessionExpire: "",
+    sessionExpire: "60000 * 5",
     fileEncoding: "utf8",
-    cleanerInterval: ""
+    cleanerInterval: "600"
   },
   extensionRules: {
 
