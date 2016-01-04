@@ -7,6 +7,7 @@ var config = {
   servicesPath: __dirname + "/Services/",
   resourcesPath: __dirname + "/Resources/",
   errorContentType: "text/plain",
+  viewFolderPath: "/home/marius/Documents/Programming/Projects/JS/OOD/View",
   indexTypes: [
     "html"
   ],

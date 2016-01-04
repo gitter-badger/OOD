@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <link href="Test.css" rel="stylesheet">
+  </head>
+  <body>
+    <b>Hallo</b>
+    <?viewscript
+      controller.getModel("model").getValue("username");
+    ?>
+
+    <?viewscript
+    //lol
+      controller.getModel("model").getValue("username");
+    ?>
+  </body>
+</html>
