@@ -2,20 +2,25 @@ let __cookie = require(__dirname + "/../lib/cookies/Cookie.js");
 let __viewLoader = require(__dirname + "/../lib/ViewLoader.js");
 
 function setupController(controller, viewName) {
-  let viewLoader = new __viewLoader.class(controller,
-  (key) => { // get function
 
-  }, (key, value) => { // set function
+  controller.model = {};
 
-  }, controller.provider.config.viewFolderPath);
+  let viewLoader = new __viewLoader.class(controller, controller.provider.config.viewFolderPath, {
+    key : "Value"
+  });
 
   viewLoader.load(viewName);
   viewLoader.parse();
-  //console.log(viewLoader.viewscriptMatches);
+  return viewLoader.viewContent;
 
 }
 
 class Test {
+
+  showTestView() {
+    var content = setupController(this, Test.name);
+    return content;
+  }
 
   showMessage(p1, p2) {
 
@@ -23,8 +28,6 @@ class Test {
     cookie.addValue("key1","value1");
     cookie.addValue("key2","value2");
     this.provider.cookieManager.addCookie(cookie);*/
-
-    setupController(this, Test.name);
 
     if(this.provider.sessionManager.session == null || this.provider.sessionManager.sessin == undefined) {
       this.provider.sessionManager.startSession(this.provider.cookieManager);
