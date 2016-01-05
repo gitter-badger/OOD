@@ -6,7 +6,8 @@
     <b>Hallo</b>
     <b>
     <?viewscript
-      "Hallo was geht ab" + " Marius";
+      let date = new Date();
+      date.toGMTString();
     ?>
   </b>
 

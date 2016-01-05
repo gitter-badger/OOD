@@ -30,6 +30,14 @@ var config = {
 
     css: {
       contentType: "text/css"
+    },
+
+    ico: {
+      contentType: "image/x-icon"
+    },
+
+    png: {
+      contentType: "image/png"
     }
 
   }
