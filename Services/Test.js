@@ -5,8 +5,12 @@ function setupController(controller, viewName) {
 
   controller.model = {};
 
-  let viewLoader = new __viewLoader.class(controller, controller.provider.config.viewFolderPath, {
-    key : "Value"
+  let viewLoader = new __viewLoader.class({
+      controller: controller,
+      viewFolderPath: controller.provider.config.viewFolderPath,
+      model: {
+        key : "Value"
+      }
   });
 
   viewLoader.load(viewName);
@@ -24,15 +28,19 @@ class Test {
 
   showMessage(p1, p2) {
 
-  /*  var dateNow = Date.now();
-    var cookieDate = new Date(dateNow + (60000 * 5));
-    var cookie = new __cookie.class("cookie",null,null,null,true);
+    /*var cookie = new __cookie.class({
+      cookieName : "MariusCookie",
+      expire: new Date(Date.now() + (60000 * 10)).toGMTString(),
+      httpOnly: true
+    });
     cookie.addValue("key1","value1");
     cookie.addValue("key2","value2");
     this.provider.cookieManager.addCookie(cookie);*/
-    //console.log(this.provider.cookieManager.cookies);
 
-  if(this.provider.sessionManager.session == null || this.provider.sessionManager.session == undefined) {
+    console.log(this.provider.cookieManager.cookies);
+
+
+  /*if(this.provider.sessionManager.session == null || this.provider.sessionManager.session == undefined) {
     console.log("create session");
       this.provider.sessionManager.startSession(this.provider.cookieManager);
       this.provider.sessionManager.session.addValue("name","Marius");
@@ -40,7 +48,7 @@ class Test {
   }
 
     console.log("session");
-    console.log(this.provider.sessionManager.session);
+    console.log(this.provider.sessionManager.session*/
 
     if(this.parameter) {
         return "hdhdhdhd :D hammer " + this.parameter.message + " " + p1 + " " + p2;

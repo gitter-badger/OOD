@@ -20,8 +20,11 @@ process.argv.forEach(function (val, index, array) {
 
 function main(params) {
   let provider = require(__dirname + "/lib/Provider.js");
-  let providerObject = new provider.class(provider.class.loadConfigObject(params["config_path"]));
-  providerObject.start();
+  let configObject = provider.class.loadConfigObject(params["config_path"]);
+  if(configObject) {
+    let providerObject = new provider.class(configObject);
+    providerObject.start();
+  }
 }
 
 if(!isStarting)main(params);
