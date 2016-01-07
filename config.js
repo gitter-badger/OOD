@@ -16,7 +16,8 @@ var config = {
     cookieExpire: "",
     sessionExpire: "60000 * 5",
     fileEncoding: "utf8",
-    cleanerInterval: "600"
+    cleanerInterval: "600",
+    isFileSaving: false
   },
   extensionRules: {
 

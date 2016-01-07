@@ -37,18 +37,18 @@ class Test {
     cookie.addValue("key2","value2");
     this.provider.cookieManager.addCookie(cookie);*/
 
-    console.log(this.provider.cookieManager.cookies);
+    //console.log(this.provider.cookieManager.cookies);
 
 
-  /*if(this.provider.sessionManager.session == null || this.provider.sessionManager.session == undefined) {
+  if(this.provider.sessionManager.session == null || this.provider.sessionManager.session == undefined) {
     console.log("create session");
-      this.provider.sessionManager.startSession(this.provider.cookieManager);
-      this.provider.sessionManager.session.addValue("name","Marius");
-      this.provider.sessionManager.save();
+      //this.provider.sessionManager.startSession(this.provider.cookieManager);
+      //this.provider.sessionManager.session.addValue("name","Marius");
+    //  this.provider.sessionManager.save();
   }
 
     console.log("session");
-    console.log(this.provider.sessionManager.session*/
+    console.log(this.provider.sessionManager.session);
 
     if(this.parameter) {
         return "hdhdhdhd :D hammer " + this.parameter.message + " " + p1 + " " + p2;
